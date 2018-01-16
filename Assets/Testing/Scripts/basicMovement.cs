@@ -2,19 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 
 public class basicMovement : MonoBehaviour {
 
-	Rigidbody2D rg2D;
+	private platformerCharacter character;
+	private bool jump;
+	private float movement;
 
 	// Use this for initialization
 	void Start () {
-		rg2D = GetComponent<Rigidbody2D>();
+		character = GetComponent<platformerCharacter> ();
+	}
+
+	void Update(){
+		if (!jump) {
+			jump = Input.GetButtonDown ("Jump");
+		}
+		movement = Input.GetAxis("Horizontal");
+
+
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
+		character.Move(movement, jump);
+		jump = false;
 	}
+		
 }
