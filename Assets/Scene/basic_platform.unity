@@ -155,7 +155,7 @@ Prefab:
     - target: {fileID: 114914382136002310, guid: c1be172f01fab0b4db6cfde847e09e2d,
         type: 2}
       propertyPath: jumpForce
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 50962503763685970, guid: c1be172f01fab0b4db6cfde847e09e2d,
         type: 2}
